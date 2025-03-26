@@ -1,0 +1,22 @@
+Simple Hello Word not use time librarys
+            real    user    sys
+
+CPython     0,037s  0,026s  0,011s
+CPythonC    0,038s  0,025s  0,013s
+PyPy        0,058s  0,028s  0,028s
+PyPyC       0,072s  0,039s  0,033s
+PHP 8       0,029s  0,014s  0,015s
+JAVA        0,069s  0,046s  0,032s
+NODE        0,073s  0,055s  0,019s
+
+----------------------------------------
+Simple Hello Word using time librarys
+            time millis
+
+CPython     3.790199980358011e-05s (0,000038)
+CPythonC    
+PyPy        
+PyPyC       
+PHP 8       0.0000000000388622 s
+JAVA        0,001000 ms
+NODE        5.020674 milis
