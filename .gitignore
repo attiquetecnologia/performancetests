@@ -1,3 +1,5 @@
 *.pyc
 *.class
 /node_modules
+.venv
+__pycache__
