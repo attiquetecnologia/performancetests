@@ -1,16 +1,18 @@
+import uvicorn
 from flask import Flask, jsonify
+from asgiref.wsgi import WsgiToAsgi
 
 app = Flask(__name__)
 
 app.secret_key = "123"
 
 @app.route('/', methods=['GET'])
-def index():
+async def index():
     return "Hello World"
 
 
 @app.route("/api", methods=['GET'])
-def api():
+async def api():
     dados = [
         {'id': 1, 'name': 'Ronald'},
         {'id': 2, 'name': 'Ronald'},
@@ -26,5 +28,5 @@ def api():
     return jsonify(dados)
 
 if __name__ == "__main__":
-    app.run()
-    
+    # app.run(port=8000)
+    uvicorn.run(WsgiToAsgi(app), host="0.0.0.0", port=8000)
